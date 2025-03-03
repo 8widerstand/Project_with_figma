@@ -521,7 +521,7 @@ header{
     text-align: start;
     gap: 30px;
     height: 500px;
-    background-image: url(bg-black.jpg);
+    background-image: url(assets/imgs/bg-black.jpg);
     color: white;
     padding: 50px;
 }
