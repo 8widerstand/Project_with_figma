@@ -30,8 +30,8 @@ window.addEventListener('scroll', () => {
 
     if(window.scrollY > container.offsetTop - container.offsetHeight -200 && activated===false) {
         counters.forEach((counter) => {
-            counter.innerText = 100;
-            let count = 150;
+            counter.innerText = 50;
+            let count = 100;
 
         function updateCount(){
             const target = parseInt(counter.dataset.count);
@@ -59,7 +59,7 @@ window.addEventListener('scroll', () => {
 let open = document.querySelector('.open-svg');
 let close = document.querySelector('.close-svg');
 let menu = document.querySelector('.link');
-let logo = document.querySelector('.logo');
+
 
 open.addEventListener('click', () => {
     menu.classList.toggle('active');
@@ -69,4 +69,18 @@ open.addEventListener('click', () => {
 close.addEventListener('click', () => {
     menu.classList.remove('active');
     open.style.display = 'block';
+});
+
+/*----------design---------*/
+let btnContent = document.querySelector('.btn-content');
+let logoItem = document.querySelector('.logo-item');
+let btnText = document.querySelector('.btn-text');
+
+btnContent.addEventListener('mouseover', () => {
+    btnText.classList.add('active');
+    logoItem.classList.add('active');
+});
+btnContent.addEventListener('mouseout', () => {
+    logoItem.classList.remove('active');
+    btnText.classList.remove('active');
 });

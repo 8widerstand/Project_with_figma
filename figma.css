@@ -28,9 +28,13 @@ root{
     --width-max: 1200px;
     padding-inline: calc((100vw - var(--width-max)) / 2);
 }
+header{
+    background-color: #f4f6f8;
+}
 .nav-bar{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
     width: 100%;
     overflow-inline: hidden;
@@ -47,7 +51,10 @@ root{
 .nav-links{
     display: flex;
     gap: 20px;
+    font-size: 20px;
+    font-weight: 700;
 }
+
 .logo{
     display: flex;
     align-items: center;
@@ -62,12 +69,94 @@ ul > li{
 ul > li a, div > h1 a{
     color: inherit;
     text-decoration: none;
+
 }
+.copy{
+    display: none;
+}
+.last{
+    width:35px;
+}
+.waft{
+    position: relative;
+    display: block;
+    content: "";
+    width: 50px;
+    height: 3px;
+    background-color: #2F9C95;
+    transform: translateX(-10%);
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+.link-items:hover .waft{
+    transform: translateX(0%);
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    opacity: 1;
+}
+
+
 .sub-logo{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+}
+.Registration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.btn-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #050c14;
+    width: max-content;
+}
+
+.btn-text.active{
+    z-index: 1000;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+.btn-text{
+    z-index: 1000;
+    transition: 0.3s ease-in-out;
+}
+.btn0{
+    display: flex;
+    background-color: #ffffff;
+    color: #050c14;
+    padding: 10px 20px;
+    width: max-content;
+    border: 1px solid #66BB69;
+    cursor: pointer;
+}
+.logo-item {
+    position: absolute;
+    display: flex;
+    content: "";
+    width: 1px;
+    height: 47px;
+    background-color: #66BB69;
+    top: 12px;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1;
+}
+.logo-item.active{
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateX(1px);
+    width: 120px;
+    z-index: 1;
 }
 
 .slide-1{
@@ -114,25 +203,11 @@ ul > li a, div > h1 a{
 .slide-1 a {
     margin-block: 22px;
 }
-.btn0{
-    padding: 10px;
-    background-color: #66BB69;
-    color: white;
-}
-.Registration{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-ul li:hover{
-    opacity: 0.6;
-}
+
 .btn0:hover{
     opacity: 1;
 }
-header{
-    background-color: #f4f6f8;
-}
+
 .open-svg, .close-svg {
     display: none;
 }
@@ -591,6 +666,7 @@ header{
     cursor: pointer;
 }
 
+
 /*------------------Responsive------------------*/
 @media (max-width: 900px){
     .link{
@@ -641,6 +717,9 @@ header{
         padding-bottom: 20px ;
         padding-right: 60px;
     }
+    .logo-content{
+        display: none;
+    }
     .container{
         padding: 0 20px 0 20px;
     }
@@ -668,6 +747,12 @@ header{
         display: block;
         position: relative;
         cursor: pointer;
+    }
+    .waft{
+        display: none;
+    }
+    .copy{
+        display: block;
     }
     /*--------*/
     .hero{
