@@ -71,16 +71,3 @@ close.addEventListener('click', () => {
     open.style.display = 'block';
 });
 
-/*----------design---------*/
-let btnContent = document.querySelector('.btn-content');
-let logoItem = document.querySelector('.logo-item');
-let btnText = document.querySelector('.btn-text');
-
-btnContent.addEventListener('mouseover', () => {
-    btnText.classList.add('active');
-    logoItem.classList.add('active');
-});
-btnContent.addEventListener('mouseout', () => {
-    logoItem.classList.remove('active');
-    btnText.classList.remove('active');
-});
