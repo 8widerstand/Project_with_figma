@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
 *,*::after,*::before{
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family: 'DM', sans-serif;
 }
 body{
     position: relative;
@@ -10,6 +10,7 @@ body{
     left : 0;
     top : 0;
     font-size : 20px;
+    font-family: 'DM Sans', sans-serif;
 }
 
 @media (max-width: 1200px){
@@ -29,17 +30,22 @@ root{
     padding-inline: calc((100vw - var(--width-max)) / 2);
 }
 header{
-    background-color: #f4f6f8;
+    background-color: #aaef53;
+    color: #333;
 }
 .nav-bar{
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:20px 10px;
-    width: 100%;
-    overflow-inline: hidden;
+    padding-block:20px 10px;
     text-transform: capitalize;
     gap: 13vh;
+    z-index: 9000;
+    background-color: #aaef53;
+    top: 0;
+    width: 100%;
+    left: 0;
 }
 .link{
     position: relative;
@@ -131,9 +137,9 @@ ul > li a, div > h1 a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #66BB69;
-    width: 10px;
-    height: 45px;
+    background-color: #145C9E;
+    width: 1px;
+    height: 100%;
     border-radius: 0 60% 60% 0;
     top:0;
     transition: 0.4s ease-in-out;
@@ -141,11 +147,13 @@ ul > li a, div > h1 a{
     z-index: -1;
 }
 .btn-content:hover .btn-text::before{
+    position: absolute;
     left: 0;
     width: 100%;
     transition: 0.4s ease-in-out;
-    background-color: #66BB69;
+    background-color: #145C9E;
     border-radius: 0;
+    top:0;
 }
 .btn-content:hover .btn-text{
     color: #ffffff;
@@ -183,46 +191,43 @@ ul > li a, div > h1 a{
     width: 120px;
     z-index: 1;
 }
-
+/*--------------------------header-----------------------------*/
+.hero{
+    position: relative;
+    padding-top: 30px;
+}
 .slide-1{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     width: 100%;
-    overflow-inline: hidden;
 }
 .img{
-    height: 285px;
-    width: 275px;
+    height: 35%;
+    width: 35%;
+    float: right;
+    background: #FDFFFF;
+    border-radius: 50%;
+    padding: 10px;
 }
-.main-content{
-    display:block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
+
 .slide-1 {
     padding: 0 50px 70px 0;
     margin-top:70px;
 }
 .slide-1-content{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items:flex-start;
+
     gap: 5px;
     width: 100%;
 }
 .slide-1-content h1{
-    font-size: 53px;
-    color: #66BB69;
+    font-size: 3rem;
+    color: #050c14;
 }
 .slide-1-content h2{
-    color:#66BB69;
-    font-size: 53px
+    color:#065A82;
+    font-size: 3rem;
 }
 .slide-1-content p{
     padding-top: 10px;
@@ -233,8 +238,42 @@ ul > li a, div > h1 a{
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 100px;
-    width: 200px;
+    height: 50%;
+    width: 150px;
+}
+.button-text{
+    text-decoration: none;
+    z-index: 0;
+    width: 100px;
+    height: 55px;
+    background: #FDFFFF;
+}
+.button-text:hover{
+    z-index: 100;
+    transition: 0.5s ease-in-out;
+    color: #FDFFFF;
+}
+.button-text::before{
+    content: "";
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #145C9E;
+    border-radius: 0 50% 50% 0;
+    width: 1px;
+    height: 100%;
+    top:0;
+    left: -20px;
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+}
+.button-text:hover.button-text::before{
+    left: 0;
+    transition: 0.5s ease-in-out;
+    border-radius: 0;
+    background-color: #145C9E;
+    width: 100%;
 }
 .button-content a{
     position: relative;
@@ -245,41 +284,7 @@ ul > li a, div > h1 a{
     color: rgb(5, 12, 20);
     transition: 0.5s ease-in-out;
 }
-.button-text{
-    text-decoration: none;
-    border: 2px solid #66BB69;
-    z-index: 0;
-    width: 100px;
-    height: 55px;
-}
-.button-text::before{
-    content: "";
-    position: absolute;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #09b0b0;
-    border-radius: 0 50% 50% 0;
-    width: 1px;
-    height: 55px;
-    top:0;
-    left: -20px;
-    transition: 0.4s ease-in-out;
-    z-index: -1;
-}
-.button-text:hover.button-text::before{
-    left: 0;
-    transition: 0.4s ease-in-out;
-    border-radius: 0;
-    background-color: #66BB69;
-    width: 100%;
-}
 
-.button-text:hover{
-    color: #ffffff;
-    z-index: 100;
-    transition: 0.5s ease-in-out;
-}
 
 .slide-1 a {
     margin-block: 22px;
@@ -287,10 +292,19 @@ ul > li a, div > h1 a{
 .open-svg, .close-svg {
     display: none;
 }
-/*----------------main-0-----------*/
+/*----------------main-0-----------------------*/
+.main-content{
+    display:block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .main-0 {
+
     position: relative;
     margin-block: 25px;
+
 }
 .main-content h1 {
     font-size: 30px;
@@ -306,21 +320,22 @@ ul > li a, div > h1 a{
 .main-img{
     position: relative;
     display: flex;
-    gap: 150px;
     align-items: center;
     justify-content: center;
+    gap: 150px;
     height: 120px;
 }
 .main-img img{
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
 }
 .main-imgs{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
+    left: 10%;
+
 }
 /*-------------scroll---------*/
 .scroller{
@@ -357,7 +372,7 @@ ul > li a, div > h1 a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 20px 10px;
 }
 .community-content h1 {
     padding:30px 0 10px 0;
@@ -393,7 +408,7 @@ ul > li a, div > h1 a{
 }
 /*------------main-1-----------*/
 .h{
-    color:  #434850;
+    color:  #145C9E;
 }
 .p{
     color: rgba(5, 12, 20, 0.62);
@@ -401,97 +416,96 @@ ul > li a, div > h1 a{
 .unlock {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
     padding-block: 50px;
-    margin-block : 20px;
+    color: white;
+}
+.unlock-img{
+    background: #145C9E;
+    width: 100%;
+    padding-block: 50px;
 }
 .unlock-text{
-    padding-block: 20px;
-}
-.unlock-text h1{
+    max-width:65rem;
     padding-bottom: 20px;
-}
+    color: white;
 
+}
+.unlock-title{
+    padding-bottom: 20px;
+    color: #A1E44D;
+}
 .unlock-img img{
-    width: auto;
-    height: 300px;
+    width: 30%;
+    height: 30%;
     padding-bottom: 30px;
+    float: left;
+}
+.unlock-button{
+   background: #FDFFFF;
+    border: 1px solid #66BB69;
+}
+.button-unlock a {
+    color: white;
+    text-decoration: none;
 }
 /*----------achievements------*/
 .achievements{
-    background-color: #f4f6f8;
-    padding-inline:90px ;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    padding-inline: 50px;
+    box-shadow: 0  2px 2px 0   rgba(0, 0, 0, 0.1);
 }
 
 .achievements-svg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    position: relative;
     align-items: start;
-    justify-content: start;
+    justify-content: space-between;
     text-align: start;
+    padding: 20px;
+    width: 50%;
+    left: 10%;
 }
+
 .achievements-svg1{
     display: flex;
-    justify-content: space-between;
     align-items: start;
     gap: 10px;
 }
 .achievements-content span {
     color: #66BB69;
 }
-.achievements-content p{
-    padding-top: 10px;
-    font-size: 13px;
-}
-.achievements-text1-content{
-    position: relative;
-    margin-left:10px;
 
-}
-.achievements-text3{
-    position: relative;
-    margin-left:20px;
-}
-.align{
-    position: relative;
-    margin-left: -20px;
-    left : 20px
-}
-.align1{
-    position: relative;
-    left: -40px;
-}
 
 /*----------calender---------*/
 .common{
     position: relative;
     display: flex;
-    justify-content: space-between;
     width: 100%;
     padding-block: 50px;
     margin-block : 20px;
+    padding-inline: 20px;
 }
-.calender-img img{
+.calender img{
     width: auto;
     height: 400px;
     padding-bottom: 30px;
+    float: right;
 }
-.btn1{
-    position: absolute;
-    margin-top:15px;
-    font-size: 16px;
+.calender-button{
     border: 1px solid #66BB69;
-    background-color: #66BB69;
-    text-decoration: none;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
+    margin-top: 20px;
 }
 .calender-text h1{
     position: relative;
     margin-top: 30px;
+    color: #145C9E;
 }
 .calender-text p{
     position: relative;
@@ -501,31 +515,33 @@ ul > li a, div > h1 a{
 /*----------customer's-----*/
 .customers-content{
     position: relative;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: space-around;
     width: 100%;
+    padding: 50px;
+    box-shadow: 0  2px 2px 0   rgba(0, 0, 0, 0.1);
     background-color: #f4f6f8;
-    padding: 60px;
+
 }
 .text-content div{
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-.customers-text2 h1{
+
+.customers-text p{
     position: relative;
+    padding-top: 10px;
     padding-bottom: 10px;
-    color: #66BB69;
+    width: 100%;
+
 }
-.customers-text1 p{
-    position: relative;
-    padding-bottom: 10px;
-}
-.customers-img {
-    display: flex;
-}
-.customers-img img{
-    width: auto;
-    height: 300px;
+.customers-text img{
+    width:25%;
+    height: 25%;
+    border-radius: 50%;
+    float: left;
+    padding-right: 10px;
 }
 .p1{
     color: #050C14AD;
@@ -533,9 +549,7 @@ ul > li a, div > h1 a{
 .customers-text p{
     position: relative;
 }
-.customers-text h1{
-    color: #66BB69;
-}
+
 .imgs {
     position: relative;
     display: flex;
@@ -554,6 +568,7 @@ ul > li a, div > h1 a{
     justify-content: flex-start;
     align-items: flex-start;
     left: 20px;
+    padding-top: 20px;
 }
 .btn2{
     position: relative;
@@ -568,8 +583,12 @@ ul > li a, div > h1 a{
     padding-left: 20px;
     color: #66BB69;
     text-decoration: none;
+    transition: 0.5s ease-in-out;
 }
-
+.btn2 a:hover {
+    color: #145C9E;
+    transition: 0.5s ease-in-out;
+}
 /*------community-udates-----*/
 
 .community-updates-text{
@@ -596,10 +615,14 @@ ul > li a, div > h1 a{
     top: -100px;
     left: 35px;
     height: 180px;
+    transition: 0.5s ease-in-out;
+}
+.frame-1:hover .frame-1-text{
     box-shadow: -1px  5px 10px -1px #ABBED1;
+    transition: 0.5s ease-in-out;
 }
 .frame-1-text p{
-    color: #696868;
+    color: #CB769E;
     font-size: 20px;
     padding: 20px;
 }
@@ -626,43 +649,33 @@ ul > li a, div > h1 a{
 
 /*------footer---------*/
 
-.footer-text {
+.footer-text > div{
     position: relative;
     display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #f4f6f8;
+    background-color: #145C9E;
     height: 250px;
     padding-block: 50px;
 }
-.button{
+.footer-text h1{
+    color: white;
+}
+.button-3{
     position: relative;
     display: flex;
     justify-content: center;
-    border-radius: 10px;
-    top: 30px;
+    align-items: center;
     width: 100%;
+    padding: 10px;
 }
-
-.btn3 > div >  a{
-    display: flex;
+.get-button-content{
+    background: #145C9E;
+    border: 1px solid #66BB69;
     color: white;
     text-decoration: none;
-    width: max-content;
-    padding-block: 10px;
-    margin-block: 10px;
 }
-.btn3{
-    display: flex;
-    position: relative;
-    background-color: #66BB69;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding-inline: 20px;
-}
-
 .footer-elt{
     position: relative;
     display: grid;
@@ -830,9 +843,9 @@ ul > li a, div > h1 a{
     .copy{
         display: block;
     }
-    /*--------*/
+    /*---header-----*/
     .hero{
-        padding: 20px 10px 5px 40px ;
+        padding: 50px 10px  ;
     }
     .community-svg{
         display: grid;
@@ -926,5 +939,14 @@ ul > li a, div > h1 a{
     }
     .elt4{
         grid-column: -4/4;
+    }
+}
+@media (max-width: 768px){
+    .community-svg{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
 }

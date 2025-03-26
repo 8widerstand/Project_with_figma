@@ -5,10 +5,13 @@
     <title>Website from figma</title>
     <link rel="stylesheet" href="figma.css">
     <script src="figma.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="container header">
-          <section class="nav-bar">
+          <section class="nav-bar container">
             <div class="logo">
                 <div class="sub-logo">
                   <a href="#">
@@ -53,17 +56,17 @@
           <section class="hero">
             <div class="slide-1">
                 <div class="slide-1-content">
+                    <div class="slide-1-img">
+                        <img src="assets/imgs/Illustration.png" alt="" class="img" >
+                    </div>
                     <h1>Lessons and insights</h1>
                     <h2 >from 8 years</h2>
                     <p class="p">Where to grow business as a photographer: site or social media ?</p>
                      <div class="button-content">
                          <a href="#" class="button-text">Register</a>
                      </div>
+                </div>
 
-                </div>
-                <div class="slide-1-img">
-                    <img src="assets/imgs/Illustration.png" alt="" class="img" >
-                </div>
             </div>
           </section>
     </header>
@@ -71,21 +74,23 @@
 
       <section class="community container">
 
-          <section class=" main-0">
+          <section class="main-0">
           <div class="main-content  ">
               <h1>Our clients</h1>
               <p class="p">We have been working with some Fortune 500+ clients</p>
           </div>
-          <div class="main-imgs scroller container">
-              <div class="main-img scroller__inner">
-                 <div><img src="assets/imgs/img1.png" alt="logo" class="img-fluid"></div>
-                 <div><img src="assets/imgs/img2.png" alt="logo" class="img-fluid"></div>
-                 <div><img src="assets/imgs/img3.png" alt="logo" class="img-fluid"></div>
-                 <div><img src="assets/imgs/Logo.png" alt="logo" class="img-fluid"></div>
-                 <div><img src="assets/imgs/img4.png" alt="logo" class="img-fluid"></div>
-                 <div><img src="assets/imgs/img5.png" alt="logo" class="img-fluid"></div>
-                 <div><img src="assets/imgs/img6.png" alt="logo" class="img-fluid"></div>
-              </div>
+          <div>
+              <div class="main-imgs scroller">
+                  <div class="main-img scroller__inner">
+                     <div><img src="assets/imgs/img1.png" alt="logo" class="img-fluid"></div>
+                     <div><img src="assets/imgs/img2.png" alt="logo" class="img-fluid"></div>
+                     <div><img src="assets/imgs/img3.png" alt="logo" class="img-fluid"></div>
+                     <div><img src="assets/imgs/Logo.png" alt="logo" class="img-fluid"></div>
+                     <div><img src="assets/imgs/img4.png" alt="logo" class="img-fluid"></div>
+                     <div><img src="assets/imgs/img5.png" alt="logo" class="img-fluid"></div>
+                     <div><img src="assets/imgs/img6.png" alt="logo" class="img-fluid"></div>
+                  </div>
+          </div>
           </div>
       </section>
 
@@ -154,23 +159,25 @@
                   </div>
               </div>
           </div>
+      </section>
 
-          <div class="unlock">
-              <div class="unlock-img">
-                  <img src="assets/imgs/rafiki.png" alt="">
+      <section class="unlock container">
+          <div class="unlock-img unlock-content">
+              <img src="assets/imgs/rafiki.png" alt="">
+              <div class="unlock-title">
+                  <h1>The unseen of spending three <br>years at Pixelgrade</h1>
               </div>
               <div class="unlock-text">
-                  <h1 class="h">The unseen of spending three <br>years at Pixelgrade</h1>
-                  <p class="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio..</p>
-                  <a href="#" class="btn1">Learn More</a>
+                  <aside class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio..</aside>
+              </div>
+              <div class="button-content">
+                  <a href="#" class="button-text unlock-button">Learn More</a>
               </div>
           </div>
-
       </section>
 
       <section class="main-1 container">
-
-          <div class="achievements common">
+          <div class="achievements common ">
               <div class="achievements-content">
                   <h1 class="h">Helping a local <br> <span>business reinvent itsel </span> </h1>
                   <p class="h">We reached here with our hard work and dedication</p>
@@ -188,6 +195,7 @@
                               </clipPath>
                           </defs>
                       </svg>
+
                       <div class="achievements-text1 counter">
                           <div class="achievements-text1-content align">
                               <h1 class="h">2,245,<span data-count="341">341</span></h1>
@@ -225,37 +233,32 @@
           </div>
 
           <div class="calender common">
-              <div class="calender-img">
-                  <img src="assets/imgs/pana.png" alt="">
-              </div>
               <div class="calender-text">
+                  <img src="assets/imgs/pana.png" alt="">
                   <h1 class="h">How to design your site footer <br> like we did</h1>
                   <p class="p">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
-                  <a href="#" class="btn1">Lear more</a>
+                  <div class="button-content">
+                      <a href="#" class="button-text calender-button">Learn more</a>
+                  </div>
               </div>
           </div>
 
           <div class="customers">
               <div class="customers-content">
                   <div class="text-content">
-
-                          <div class="customers-img">
-                              <img src="assets/imgs/img7.png" alt="">
-                              <div class="customers-text1">
-                                    <p class="p1">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare,
-                                      tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit.
-                                      Morbi laoreet elit at ligula molestie, nec molestie mi blandit.</p> <p class="p">Suspendisse cursus tellus sed augue ultrices, quis tristique nulla
-                                        sodales. Suspendisse eget lorem eu turpis vestibulum pretium.Suspendisse potenti.Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
-                                    </p>
-                                  <div class="customers-text2">
-                                      <h1 class="h">Tim smith</h1>
-                                      <aside class="p">British Dragon Boat Racing Association</aside>
-                                  </div>
-                              </div>
+                      <div class="customers-img">
+                          <div class="customers-text">
+                            <img src="assets/imgs/img7.png" alt="">
+                            <p class="p1">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare,
+                              tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit.
+                              Morbi laoreet elit at ligula molestie, nec molestie mi blandit.</p> <p class="p">Suspendisse cursus tellus sed augue ultrices, quis tristique nulla
+                                sodales. Suspendisse eget lorem eu turpis vestibulum pretium.Suspendisse potenti.Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+                            </p>
+                              <h1 class="h">Tim smith</h1>
+                              <aside class="p">British Dragon Boat Racing Association</aside>
                           </div>
-
+                      </div>
                   </div>
-
                   <div class="sub-customers-img">
                       <div class="imgs">
                           <img src="assets/imgs/img1.png" alt="logo" class="img-fluid">
@@ -273,6 +276,7 @@
                           </svg>
                       </div>
                   </div>
+
               </div>
           </div>
 
@@ -333,11 +337,11 @@
           <div class="footer-text container">
               <div>
                   <h1>Pellentesque suscipit<br> fringilla libero eu.</h1>
-                  <div class="button">
-                      <div class="btn3">
-                         <div><a href="#" class="btn3-content get">Get a Demo</a> </div>
-                          <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" fill="white" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                  <div class="button-3">
+                      <div class="button-content get-button-content">
+                         <a href="#" class="button-text">Get a Demo</a>
                       </div>
+                      <svg xmlns="http://www.w3.org/2000/svg"  width="30" height="30" fill="#A1E44D" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                   </div>
               </div>
           </div>
