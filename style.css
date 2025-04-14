@@ -419,13 +419,13 @@ ul > li a, div > h1 a{
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    padding-block: 50px;
+    padding: 25px 25px;
     color: white;
 }
 .unlock-img{
     background: #145C9E;
     width: 100%;
-    padding-block: 50px;
+    padding: 25px 25px;
 }
 .unlock-text{
     max-width:65rem;
@@ -646,29 +646,41 @@ ul > li a, div > h1 a{
     gap: 10px;
     top: 30px
 }
-
-/*------footer---------*/
-
-.footer-text > div{
+.end-text > div{
     position: relative;
     display: block;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #145C9E;
-    height: 250px;
-    padding-block: 50px;
-}
-.footer-text h1{
+    padding-block: 20px;
     color: white;
+    border-radius: 5px;
 }
 .button-3{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     padding: 10px;
+}
+
+.end-text{
+    padding-block: 20px;
+}
+
+.end-text-content div{
+    margin-bottom: 10px;
+}
+.svg-button-3{
+    opacity: 0;
+    transform:translateX(-30px);
+    transition: 0.4s ease-in-out;
+}
+.button-3:hover .svg-button-3{
+    opacity: 1;
+    transform:translateX(0);
+    transition: 0.4s ease-in-out;
 }
 .get-button-content{
     background: #145C9E;
@@ -676,88 +688,61 @@ ul > li a, div > h1 a{
     color: white;
     text-decoration: none;
 }
+/*------footer---------*/
+
 .footer-elt{
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-content:center;
-    text-align: start;
     gap: 30px;
-    height: 500px;
+    height: 100%;
     background-image: url(assets/imgs/bg-black.jpg);
     color: white;
     padding: 50px;
 }
-.footer-elt-1{
+.sub-content div{
     position: relative;
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-}
-.elt div > div{
-    padding-bottom: 25px;
-}
-.social-media a{
-    position: relative;
-    padding-right: 20px;
-}
-
-.footer-elt-2, .footer-elt-3{
-    position: relative;
-   top:50px
+    padding-block: 10px;
 }
 .footer-link > div >a{
     color: white;
     text-decoration: none;
+    transition: .2s ease-in-out;
 }
 .footer-link > div >a:hover{
     opacity: 0.6;
+    transition: .2s ease-in-out;
 }
-.footer-link{
+.footer-elt-text-4 h1{
     position: relative;
-    top: 30px;
+    width: 100%;
+    flex-wrap: nowrap;
 }
-.footer-elt-4{
+.mail-arrea form{
     position: relative;
-    top: -60px;
-}
-.footer-elt-4 h1 {
-    padding-bottom: 20px;
-    padding-top: 40px;
-}
-.footer-elt-text-4 input{
-    position: relative;
-    width: 300px;
-    height: 45px;
-    border: none;
-    padding-inline: 10px;
-    outline: none;
-    border-radius: 10px;
-    font-size: 20px;
-}
-.mail-arrea label{
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    top : 5px;
-    left: -10px;
-    background-color: white;
-}
-.mail-arrea{
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10px;
-    background-color: white;
-}
-.footer-elt-text-4 svg:hover{
-    cursor: pointer;
-}
+    justify-content: space-between;
 
+}
+form {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+}
+form input, form button{
+    background: #ffffff;
+    outline: none;
+    border: none;
+}
 
 /*------------------Responsive------------------*/
-@media (max-width: 900px){
+@media screen and (max-width: 900px){
+    .container{
+        overflow: hidden;
+        width: 100%;
+    }
     .link{
         visibility: hidden;
         opacity: 0;
@@ -769,7 +754,7 @@ ul > li a, div > h1 a{
         display: block;
         background-color: white;
         flex-direction: column;
-        z-index: 100000;
+        z-index: 1000;
         top: 10px;
         padding-left: 30px ;
     }
@@ -791,9 +776,10 @@ ul > li a, div > h1 a{
     .logo{
         display: flex;
         align-items: center;
-        justify-content: space-between;
         width: 100%;
+        justify-content: space-between;
     }
+
     .sub-logo{
         display: flex;
         align-items: center;
@@ -834,7 +820,7 @@ ul > li a, div > h1 a{
     }
     .open-svg{
         display: block;
-        position: relative;
+        position: static;
         cursor: pointer;
     }
     .waft{
@@ -843,6 +829,7 @@ ul > li a, div > h1 a{
     .copy{
         display: block;
     }
+
     /*---header-----*/
     .hero{
         padding: 50px 10px  ;
@@ -866,19 +853,21 @@ ul > li a, div > h1 a{
     .svg-text p {
         padding: 10px;
     }
-    /*---------------*/
-    .customers-img {
-        display:grid;
-        grid-template-rows: repeat(2, 1fr);
-        gap: 20px;
+    /*----main-content---------*/
+    .main-imgs{
+        position: relative;
+        left: 0;
     }
+
+    /*-------customers--------*/
+
     .customers-img img{
         position: relative;
         display: block;
         align-items: center;
         justify-content: center;
         text-align: center;
-        left: 25%;
+
     }
     .sub-customers-img{
         position: relative;
@@ -888,65 +877,62 @@ ul > li a, div > h1 a{
         position: relative;
         gap: 20px;
     }
+    /*----------achievements-------*/
+    .achievements{
+        display: flex;
+        flex-direction: column;
+    }
+    .achievements-svg{
+        width: 100%;
+        left: 0;
+    }
     /*--------------*/
     .community-updates-img{
         position: relative;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-    .frame-content3{
-        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        left: 50%;
+        flex-direction: column;
     }
+
 
     /*--------------footer---------------------------*/
     .footer-elt{
-        height: 700px;
-    }
-    .footer-text h1{
         position: relative;
-        padding-top: 30px;
-    }
-    .footer-elt{
-        position: relative;
-        display: grid;
-        grid-template-rows: repeat(4, 1fr);
-        gap: 10px;
+        height: 100%;
+
     }
     .footer-elt div{
        padding-right: 20px;
     }
-    .footer-elt-4{
-        position: relative;
-        align-items: flex-start;
-        justify-content: flex-start;
-        text-align: justify;
-        left: -70%;
-        top: 20px;
-    }
-    .footer-elt-text-4{
-        position: relative;
-       display: block;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        padding-inline: 20px;
-    }
+
     .elt4{
-        grid-column: -4/4;
+        grid-column: -1/1;
+        width: min-content;
     }
 }
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .community-svg{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+    .footer-elt{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .elt4{
+        grid-column: -2/2;
+        width: min-content;
+    }
+    .sub-customers-img{
+        position: relative;
+        display: block;
+    }
+}
+@media (max-width: 480px){
+    .link{
+        display: none;
     }
 }
