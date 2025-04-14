@@ -19,7 +19,7 @@ body{
     }
 }
 root{
-    --color-1: #28CB8B;
+    --color-1: #aaef53;
     --color-2: #263238;
     --color-3: #2194f3;
     --color-4: #263238;
@@ -33,16 +33,21 @@ header{
     background-color: #aaef53;
     color: #333;
 }
+.start-page{
+    --width-max: 1200px;
+    padding-inline: calc((100vw - var(--width-max)) / 2);
+}
+
 .nav-bar{
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-block:20px 10px;
+    padding-inline: 20px;
     text-transform: capitalize;
-    gap: 13vh;
-    z-index: 9000;
     background-color: #aaef53;
+    z-index: 9000;
     top: 0;
     width: 100%;
     left: 0;
@@ -925,6 +930,9 @@ form input, form button{
     .sub-customers-img{
         position: relative;
         display: block;
+    }
+    .footer-elt div{
+        padding-right: 0;
     }
 }
 @media (max-width: 480px){
