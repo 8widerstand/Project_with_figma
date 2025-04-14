@@ -15,7 +15,7 @@ body{
 
 @media (max-width: 1200px){
     .container{
-   padding-inline: 20px;
+      padding-inline: 20px;
     }
 }
 root{
@@ -490,7 +490,6 @@ ul > li a, div > h1 a{
     width: 100%;
     padding-block: 50px;
     margin-block : 20px;
-    padding-inline: 20px;
 }
 .calender img{
     width: auto;
@@ -740,8 +739,7 @@ form input, form button{
 /*------------------Responsive------------------*/
 @media screen and (max-width: 900px){
     .container{
-        overflow: hidden;
-        width: 100%;
+        max-width: 900px;
     }
     .link{
         visibility: hidden;
@@ -755,7 +753,7 @@ form input, form button{
         background-color: white;
         flex-direction: column;
         z-index: 1000;
-        top: 10px;
+        top: 0;
         padding-left: 30px ;
     }
     .link.active{
@@ -770,7 +768,7 @@ form input, form button{
         z-index: 100000;
         visibility: visible;
         opacity: 10;
-        top: 10px;
+        top: 0;
         padding-left: 30px ;
     }
     .logo{
@@ -787,7 +785,7 @@ form input, form button{
     .nav-bar{
         position: fixed;
         border-bottom: 1px solid #f4f6f8;
-        z-index: 10000;
+        z-index:2000;
         background-color: white;
         padding-bottom: 20px ;
         padding-right: 60px;
@@ -869,13 +867,9 @@ form input, form button{
         text-align: center;
 
     }
-    .sub-customers-img{
-        position: relative;
-        left: -5px;
-    }
     .imgs{
         position: relative;
-        gap: 20px;
+        gap: 10px;
     }
     /*----------achievements-------*/
     .achievements{
@@ -898,7 +892,6 @@ form input, form button{
     .footer-elt{
         position: relative;
         height: 100%;
-
     }
     .footer-elt div{
        padding-right: 20px;
@@ -910,6 +903,9 @@ form input, form button{
     }
 }
 @media screen and (max-width: 768px){
+    .container{
+        max-width: 768px;
+    }
     .community-svg{
         display: flex;
         flex-direction: column;
@@ -932,7 +928,43 @@ form input, form button{
     }
 }
 @media (max-width: 480px){
-    .link{
-        display: none;
+    .container{
+        max-width: 480px;
     }
+    footer{
+        max-width: 480px;
+        width: 100%;
+    }
+    .achievements-svg{
+        display: flex;
+        flex-direction: column;
+    }
+    .elt h1 {
+        font-size: 25px;
+    }
+    .footer-elt{
+        gap: 0;
+        padding-block: 20px;
+        padding-inline: 20px;
+    }
+    .footer-elt > div {
+        padding-bottom: 40px;
+    }
+    form {
+        position: relative;
+        padding: 0;
+    }
+    .footer-elt div{
+        padding-right: 0;
+    }
+    .elt .footer-elt-1 {
+        position: relative;
+        padding-right: 10px;
+    }
+    .elt{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
