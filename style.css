@@ -461,27 +461,32 @@ ul > li a, div > h1 a{
     display: flex;
     align-items: flex-start;
     width: 100%;
-    padding-inline: 50px;
+    padding-inline: 20px ;
     box-shadow: 0  2px 2px 0   rgba(0, 0, 0, 0.1);
 }
 
 .achievements-svg {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
     position: relative;
     align-items: start;
     justify-content: space-between;
     text-align: start;
-    padding: 20px;
     width: 50%;
-    left: 10%;
 }
-
+.achievements-svg > div {
+    position: relative;
+   padding-inline: 20px;
+    width: 100%;
+}
+.achievements-content{
+    position: relative;
+    padding-inline: 20px 40px;
+}
 .achievements-svg1{
     display: flex;
     align-items: start;
-    gap: 10px;
+
 }
 .achievements-content span {
     color: #66BB69;
@@ -495,6 +500,7 @@ ul > li a, div > h1 a{
     width: 100%;
     padding-block: 50px;
     margin-block : 20px;
+    padding-inline: 20px;
 }
 .calender img{
     width: auto;
@@ -502,6 +508,8 @@ ul > li a, div > h1 a{
     padding-bottom: 30px;
     float: right;
 }
+
+
 .calender-button{
     border: 1px solid #66BB69;
     margin-top: 20px;
@@ -514,6 +522,7 @@ ul > li a, div > h1 a{
 .calender-text p{
     position: relative;
     margin-top: 20px;
+    padding-inline: 5px ;
 }
 
 /*----------customer's-----*/
@@ -555,11 +564,10 @@ ul > li a, div > h1 a{
 }
 
 .imgs {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 35px;
+    gap: 30px;
 }
 .imgs img{
     width: auto;
@@ -574,6 +582,17 @@ ul > li a, div > h1 a{
     left: 20px;
     padding-top: 20px;
 }
+.btn2 svg{
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 0.4s ease-in-out;
+}
+.btn2:hover svg{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.4s ease-in-out;
+}
 .btn2{
     position: relative;
     top: 10px;
@@ -586,9 +605,10 @@ ul > li a, div > h1 a{
     width: max-content;
     padding-left: 20px;
     color: #66BB69;
-    text-decoration: none;
+
     transition: 0.5s ease-in-out;
 }
+
 .btn2 a:hover {
     color: #145C9E;
     transition: 0.5s ease-in-out;
@@ -626,13 +646,30 @@ ul > li a, div > h1 a{
     transition: 0.5s ease-in-out;
 }
 .frame-1-text p{
-    color: #CB769E;
+    color: #050c14;
     font-size: 20px;
     padding: 20px;
 }
 .frame-1-text a{
     color: #0db213;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+.frame-btn svg {
+    position: relative;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 0.4s ease-in-out;
+}
+.frame-btn:hover svg{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.4s ease-in-out;
+    fill: #145C9E;
+}
+.frame-1-text a:hover{
+    color: #145C9E;
+    transition: 0.3s ease-in-out;
 }
 .frame-btn{
     position: relative;
@@ -704,7 +741,7 @@ ul > li a, div > h1 a{
     color: white;
     padding: 50px;
 }
-.sub-content div{
+.sub-content > div{
     position: relative;
     padding-block: 10px;
 }
@@ -712,6 +749,10 @@ ul > li a, div > h1 a{
     color: white;
     text-decoration: none;
     transition: .2s ease-in-out;
+}
+.logo1{
+    position: relative;
+    display: flex;
 }
 .footer-link > div >a:hover{
     opacity: 0.6;
@@ -742,7 +783,7 @@ form input, form button{
 }
 
 /*------------------Responsive------------------*/
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
     .container{
         max-width: 900px;
     }
@@ -898,25 +939,29 @@ form input, form button{
         position: relative;
         height: 100%;
     }
-    .footer-elt div{
-       padding-right: 20px;
-    }
-
     .elt4{
         grid-column: -1/1;
         width: min-content;
+    }
+    .footer-elt > div{
+        padding-right: 10px;
     }
 }
 @media screen and (max-width: 768px){
     .container{
         max-width: 768px;
     }
-    .community-svg{
+    .community-svg ;{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+    .community-updates-img;{
+        position: relative;
+        display: flex;
+        flex-direction: column;
     }
     .footer-elt{
         position: relative;
@@ -935,9 +980,23 @@ form input, form button{
         padding-right: 0;
     }
 }
+@media screen and (max-width: 1145px){
+    .community-updates-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    }
+
+}
 @media (max-width: 480px){
     .container{
         max-width: 480px;
+    }
+    .imgs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
     }
     footer{
         max-width: 480px;
@@ -947,17 +1006,13 @@ form input, form button{
         display: flex;
         flex-direction: column;
     }
-    .elt h1 {
-        font-size: 25px;
-    }
+
     .footer-elt{
         gap: 0;
         padding-block: 20px;
         padding-inline: 20px;
     }
-    .footer-elt > div {
-        padding-bottom: 40px;
-    }
+
     form {
         position: relative;
         padding: 0;
@@ -973,6 +1028,41 @@ form input, form button{
         display: block;
         align-items: center;
         justify-content: center;
+    }
+    .calender-text p{
+        position: relative;
+        margin-top: 20px;
+        padding-inline: 5px 30px;
+    }
+    .calender img {
+        width: auto;
+        height: 300px;
+        padding-bottom: 30px;
+        float: none;
+    }
+    .community-svg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-elt{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .footer-elt-text-4 h1{
+        position: relative;
+        flex-wrap: nowrap;
+        color: #66BB69;
+        width: 100%;
+    }
+    .elt {
+        padding-bottom: 30px;
+    }
+    .footer-link{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
